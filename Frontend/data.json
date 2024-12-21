@@ -1,0 +1,57 @@
+[
+    {
+      "name": "John Doe",
+      "designation": "Software Engineer",
+      "image": "https://via.placeholder.com/150?text=Product+1"
+    },
+    {
+      "name": "Jane Smith",
+      "designation": "Project Manager",
+      "image": "https://via.placeholder.com/150?text=Product+2"
+    },
+    {
+      "name": "Michael Johnson",
+      "designation": "Data Analyst",
+      "image": "https://via.placeholder.com/150?text=Product+3"
+    },
+    {
+      "name": "Emily Davis",
+      "designation": "UI/UX Designer",
+      "image": "https://via.placeholder.com/150?text=Product+4"
+    },
+    {
+      "name": "Chris Brown",
+      "designation": "DevOps Engineer",
+      "image": "https://via.placeholder.com/150?text=Product+5"
+    },
+    {
+      "name": "Sarah Wilson",
+      "designation": "Quality Assurance Tester",
+      "image": "https://via.placeholder.com/150?text=Product+6"
+    },
+    {
+      "name": "David Lee",
+      "designation": "Backend Developer",
+      "image": "https://via.placeholder.com/150?text=Product+7"
+    },
+    {
+      "name": "Sophia Martinez",
+      "designation": "Frontend Developer",
+      "image": "https://via.placeholder.com/150?text=Product+8"
+    },
+    {
+      "name": "James Taylor",
+      "designation": "Product Manager",
+      "image": "https://via.placeholder.com/150?text=Product+9"
+    },
+    {
+      "name": "Olivia Hernandez",
+      "designation": "Scrum Master",
+      "image": "https://via.placeholder.com/150?text=Product+10"
+    },{
+      "name": "Afsar Udin",
+      "designation": "DevOps Engineer",
+      "image": "https://via.placeholder.com/150?text=Product+11"
+    }
+  ]
+  
