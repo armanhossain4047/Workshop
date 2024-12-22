@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Add New Employee</title>  
+</head>
+<body class="bg-blue-500">
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+     <!-- Add New Employee -->
+    <div class="max-w-4xl mx-auto mt-10 p-6 bg-gray-50 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Add New Employee</h1>
+        <form class="space-y-4" action="/add-employee" method="POST">
+            <!-- Name Fields -->
+            <div class="flex gap-4">
+                <div class="flex-1">
+                    <label for="first_name" class="block text-sm font-medium text-gray-700">First Name</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Enter first name" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="flex-1">
+                    <label for="last_name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Enter last name" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+  
+            <!-- Gender and Date of Birth -->
+            <div class="flex gap-4">
+                <div class="flex-1">
+                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <select id="gender" name="gender" required 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="flex-1">
+                    <label for="date_of_birth" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                    <input type="date" id="date_of_birth" name="date_of_birth" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+  
+            <!-- Nationality, Phone Number, Email -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label for="nationality" class="block text-sm font-medium text-gray-700">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" placeholder="Enter nationality" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="text" id="phone_number" name="phone_number" placeholder="Enter phone number" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+  
+            <!-- Address -->
+            <div>
+                <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                <textarea id="address" name="address" rows="3" placeholder="Enter address" 
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+  
+            <!-- Job Details -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="job_title" class="block text-sm font-medium text-gray-700">Job Title</label>
+                    <input type="text" id="job_title" name="job_title" placeholder="Enter job title" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="department" class="block text-sm font-medium text-gray-700">Department</label>
+                    <input type="text" id="department" name="department" placeholder="Enter department" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+  
+            <!-- Hire Date and Salary -->
+            <div class="flex gap-4">
+                <div class="flex-1">
+                    <label for="hire_date" class="block text-sm font-medium text-gray-700">Hire Date</label>
+                    <input type="date" id="hire_date" name="hire_date" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="flex-1">
+                    <label for="salary" class="block text-sm font-medium text-gray-700">Salary</label>
+                    <input type="number" id="salary" name="salary" placeholder="Enter salary" step="0.01" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+  
+            <!-- Passport Number, Visa Status -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="passport_number" class="block text-sm font-medium text-gray-700">Passport Number</label>
+                    <input type="text" id="passport_number" name="passport_number" placeholder="Enter passport number" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="visa_status" class="block text-sm font-medium text-gray-700">Visa Status</label>
+                    <input type="text" id="visa_status" name="visa_status" placeholder="Enter visa status" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+  
+            <!-- Emergency Contact -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="emergency_contact_name" class="block text-sm font-medium text-gray-700">Emergency Contact Name</label>
+                    <input type="text" id="emergency_contact_name" name="emergency_contact_name" placeholder="Enter emergency contact name" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="emergency_contact_phone" class="block text-sm font-medium text-gray-700">Emergency Contact Phone</label>
+                    <input type="text" id="emergency_contact_phone" name="emergency_contact_phone" placeholder="Enter emergency contact phone" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+            <input type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
+            <br>
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none">
+                    Add Employee
+                </button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <!-- footer -->
+   <div id="footer-placeholder"></div>
+
+</body>   
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="/Frontend/js/admin/loadNavigation.js"></script>
+<script src="/Frontend/js/admin/loadFooter.js"></script>
+</html>

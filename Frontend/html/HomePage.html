@@ -14,43 +14,66 @@
   <!-- Navigation -->
   <div id="nav-placeholder"></div>
 
-  <!-- carosal -->
-
-  <div class="carousel w-full">
-    <div id="slide1" class="carousel-item relative w-full">
-      <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" />
-      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-        <a href="#slide4" class="btn btn-circle">❮</a>
-        <a href="#slide2" class="btn btn-circle">❯</a>
-      </div>
-    </div>
-    <div id="slide2" class="carousel-item relative w-full">
-      <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" class="w-full" />
-      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-        <a href="#slide1" class="btn btn-circle">❮</a>
-        <a href="#slide3" class="btn btn-circle">❯</a>
-      </div>
-    </div>
-    <div id="slide3" class="carousel-item relative w-full">
-      <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" class="w-full" />
-      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-        <a href="#slide2" class="btn btn-circle">❮</a>
-        <a href="#slide4" class="btn btn-circle">❯</a>
-      </div>
-    </div>
-    <div id="slide4" class="carousel-item relative w-full">
-      <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" class="w-full" />
-      <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-        <a href="#slide3" class="btn btn-circle">❮</a>
-        <a href="#slide1" class="btn btn-circle">❯</a>
-      </div>
+  <!-- Carousel for ElectricalWorkshop -->
+<div class="carousel relative w-full h-[600px] overflow-hidden" id="electricalCarousel">
+  <!-- Slide 1 -->
+  <div class="carousel-item relative w-full h-full">
+    <img src="https://4kwallpapers.com/images/wallpapers/burj-khalifa-dubai-city-skyline-skyscrapers-cityscape-night-6016x3384-6548.jpg" class="object-cover w-full h-full brightness-75" alt="Electrical Workshop Dubai" />
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+      <h2 class="text-5xl font-bold mb-4">Expert Electrical Services in Dubai</h2>
+      <p class="text-xl mb-6">Delivering top-quality electrical solutions tailored to your needs.</p>
+      <button class="px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg shadow-lg">Discover More</button>
     </div>
   </div>
+
+  <!-- Slide 2 -->
+  <div class="carousel-item hidden relative w-full h-full">
+    <img src="https://content.r9cdn.net/rimg/dimg/9c/5d/375edbe5-city-6080-1666615a2c3.jpg?width=1200&height=630&xhint=2883&yhint=2021&crop=true" class="object-cover w-full h-full brightness-75" alt="Reliable Electrical Repairs" />
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+      <h2 class="text-5xl font-bold mb-4">Reliable Electrical Repairs</h2>
+      <p class="text-xl mb-6">We ensure safety, precision, and efficiency in every project.</p>
+      <button class="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg">Get a Quote</button>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="carousel-item hidden relative w-full h-full">
+    <img src="https://www.cloud-europamundo.com/img/carousel/hd/Dubai_20221104170129.jpg" class="object-cover w-full h-full brightness-75" alt="Advanced Electrical Technologies" />
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
+      <h2 class="text-5xl font-bold mb-4">Advanced Electrical Technologies</h2>
+      <p class="text-xl mb-6">Innovative solutions for homes and businesses in Dubai.</p>
+      <button class="px-8 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg">Learn More</button>
+    </div>
+  </div>
+</div> 
+
+<!-- Carousel Functionality -->
+<script>
+  const carouselItems = document.querySelectorAll('#electricalCarousel .carousel-item');
+  let currentCarouselIndex = 0;
+
+  function updateCarousel() {
+    carouselItems.forEach((item, index) => {
+      item.classList.toggle('hidden', index !== currentCarouselIndex);
+    });
+    currentCarouselIndex = (currentCarouselIndex + 1) % carouselItems.length;
+  }
+
+  setInterval(updateCarousel, 5000); // Rotate slides every 3 seconds
+</script>
+
+<!-- Tailwind CSS Required -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+ 
+
+
 
   <!-- Expert Technicians_Cards -->
   <h1 class="ourExpet">Our Expert Technicians</h1>
   <!-- cards -->
-  <div id="cardContainer"  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-20 mb-20"></div>
+  <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-20 mb-20"></div>
 
 
 
@@ -64,5 +87,6 @@
 <script src="../js/loadNavigation.js"></script>
 <script src="../js/loadFooter.js"></script>
 <script src="../js/card.js"></script>
+<script src="/Frontend/js/carosal.js"></script>
 
 </html>

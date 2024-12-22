@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/Frontend/css/admin/attandence.css"/>
+  <title>Admin Panel</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Take Attandence -->
+    <div class="attendance-category p-6 max-w-full mx-auto bg-white shadow-lg rounded-lg border border-gray-200">
+      
+      <!-- Dropdown -->
+      <div class="mb-6">
+        <label class="block text-gray-700 font-medium mb-2">Choose Action</label>
+        <select id="action-select" class="select select-warning w-full">
+          <option disabled selected>Select an option</option>
+          <option value="take">Take Attendance</option>
+          <option value="update">Update Attendance</option>
+        </select>
+      </div>
+      
+      <!-- Date Picker -->
+      <div class="mb-6">
+        <label class="block text-gray-700 font-medium mb-2">Select Date</label>
+        <input 
+          type="date" 
+          id="date-picker" 
+          placeholder="Choose a date" 
+          class="input input-bordered w-full max-w-full border-gray-300 focus:border-warning focus:ring-warning" 
+        />
+      </div>
+    
+      <!-- Button -->
+      <div class="text-center">
+        <button 
+          id="submit-btn" 
+          class="btn btn-warning px-6 py-2 text-white font-semibold rounded-lg hover:bg-warning-dark">
+          Show Attendance Form
+        </button>
+      </div>
+    
+      <!-- Attendance Form (Hidden by Default) -->
+      <div id="attendance-form" class="mt-6 hidden p-4 bg-gray-100 rounded-lg shadow-lg">
+        <h3 class="text-lg font-bold text-blue-800 mb-4">Attendance Sheet</h3>
+        <div class="p-6 max-w-4xl mx-auto bg-white shadow-md rounded-lg border border-gray-200">
+          <!-- Title -->
+          <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Employee Attendance</h2>
+        
+          <form id="attendanceForm">
+            <table class="table-auto w-full border-collapse border border-gray-300">
+              <thead>
+                <tr class="bg-gray-200 text-gray-700">
+                  <th class="border border-gray-300 px-4 py-2 text-left">Employee ID</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Name</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">
+                    Attendance
+                    <div class="flex gap-2 mt-2">
+                      <button 
+                        type="button" 
+                        id="allPresent" 
+                        class="btn btn-xs btn-success px-2 py-1 text-white rounded">All Present</button>
+                      <button 
+                        type="button" 
+                        id="allAbsent" 
+                        class="btn btn-xs btn-error px-2 py-1 text-white rounded">All Absent</button>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-gray-100">
+                  <td class="border border-gray-300 px-4 py-2">1</td>
+                  <td class="border border-gray-300 px-4 py-2">John Doe</td>
+                  <td class="border border-gray-300 px-4 py-2">
+                    <label class="inline-flex items-center mr-4">
+                      <input type="radio" name="attendance1" value="Present" class="radio radio-sm radio-success mr-2" />
+                      Present
+                    </label>
+                    <label class="inline-flex items-center">
+                      <input type="radio" name="attendance1" value="Absent" class="radio radio-sm radio-error mr-2" />
+                      Absent
+                    </label>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-100">
+                  <td class="border border-gray-300 px-4 py-2">2</td>
+                  <td class="border border-gray-300 px-4 py-2">Jane Smith</td>
+                  <td class="border border-gray-300 px-4 py-2">
+                    <label class="inline-flex items-center mr-4">
+                      <input type="radio" name="attendance2" value="Present" class="radio radio-sm radio-success mr-2" />
+                      Present
+                    </label>
+                    <label class="inline-flex items-center">
+                      <input type="radio" name="attendance2" value="Absent" class="radio radio-sm radio-error mr-2" />
+                      Absent
+                    </label>
+                  </td>
+                </tr>
+                <!-- Add more employees as needed -->
+              </tbody>
+            </table>
+        
+            <!-- Submit Button -->
+            <div class="mt-6 text-center">
+              <button 
+                type="submit" 
+                class="btn btn-primary px-8 py-2 text-white font-medium rounded-lg shadow-md hover:bg-primary-focus">
+                Submit Attendance
+              </button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+
+</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/Frontend/js/admin/loadFooter.js"></script>
+    <script src="/Frontend/js/admin/loadNavigation.js"></script>
+    <script src="/Frontend/js/admin/attandence.js"></script>
+</html>
